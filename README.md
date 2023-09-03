@@ -3,7 +3,9 @@
 **Ziel**: Klassifizierer zur Einordnung der Fruchtarten Apfel, Banane, Traube entwerfen und schließlich den best geeignetsten Klassifizierer auswählen. 
 
 ## Benutzung 
-Zur Benutzung muss zuerst ``FruitClassifier/Data Cleaning/Datenaufbereitung und -bereinigung.ipynb`` ausgeführt werden. Resultat ist die Erstellung einer ``clean_data.csv`` (zur weiteren Verarbeitung) und einer ``clean_data.xlsx`` (zur Ansicht, falls gewünscht). Im zweiten Schritt muss ``Models, Training etc/Models.ipynb`` ausgeführt werden. Resultat ist die Bewertung der Modellvorhersagen innerhalb des Notebooks.
+Zur Benutzung muss zuerst ``FruitClassifier/Data Cleaning/Datenaufbereitung und -bereinigung.ipynb`` ausgeführt werden. Resultat ist die Erstellung einer ``clean_data.csv`` (zur weiteren Verarbeitung) und einer ``clean_data.xlsx`` (zur Ansicht, falls gewünscht). Im zweiten Schritt muss ``Models, Training etc/Models.ipynb`` ausgeführt werden. Resultat ist die Bewertung der Modellvorhersagen innerhalb des Notebooks. 
+
+Hinweis zu ``Models.ipynb``: Es ist zu beachten, dass die Grid Search für die Parameterfindung erst abgeschlossen sein sollte, bevor die Modelle erstellt und trainiert werden. Andernfalls werden die Modelle mit eigener Parametrisieung nicht richtig erzeugt. 
 
 ## Rahmenbedingungen 
 
