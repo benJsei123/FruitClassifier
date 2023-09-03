@@ -47,5 +47,4 @@ Die Untersuchung der Ergebnisse, lässt eine Auswahl eines besten Modells zu. Da
 ## Beobachtungen:
 
 - Die Wahl der Hyperparameter allein mittels Grid Search hatte tendenziell einen negativen Einfluss auf die Bewertung der Modelle. "Tendenziell" heißt, dass für die meisten Training-Testing-Durchläufe (= ein Gesamtdurchlauf des Notebooks ``Models.ipynb``) die eigens parametrisierten Modelle schlechter abschnitten. Nur manchmal waren die per Grid Search parametrisierten Modelle besser in ihren Vorhersagen. Erst durch manuelles Ausprobieren von möglichen Parameterwerten konnte bspw. für das Decision Tree Modell eine Steigerung der Genauigkeit durch Hyperparameter erreicht werden. 
-- 
 - Die Klassifizierung von Trauben funktioniert für alle 4 Modell am besten (siehe Verwechslungsmatrizen in ``Models.ipynb``). Die Klassifizierung von Äpfeln und Bananen ist für alle 4 Modelle nicht besonders zuverlässig.    
