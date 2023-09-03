@@ -5,7 +5,7 @@
 ## Benutzung 
 Zur Benutzung muss zuerst ``FruitClassifier/Data Cleaning/Datenaufbereitung und -bereinigung.ipynb`` ausgeführt werden. Resultat ist die Erstellung einer ``clean_data.csv`` (zur weiteren Verarbeitung) und einer ``clean_data.xlsx`` (zur Ansicht, falls gewünscht). Im zweiten Schritt muss ``Models, Training etc/Models.ipynb`` ausgeführt werden. Resultat ist die Bewertung der Modellvorhersagen innerhalb des Notebooks. 
 
-Hinweis zu ``Models.ipynb``: Es ist zu beachten, dass die Grid Search für die Parameterfindung erst abgeschlossen sein sollte, bevor die Modelle erstellt und trainiert werden. Andernfalls werden die Modelle mit eigener Parametrisieung nicht richtig erzeugt. 
+Hinweis zu ``Models.ipynb``: Es ist zu beachten, dass bei einzelner Ausführung der Zellen die Grid Search für die Parameterfindung erst abgeschlossen sein sollte, bevor die Modelle erstellt und trainiert werden. Andernfalls werden die Modelle mit eigener Parametrisieung nicht richtig erzeugt. 
 
 ## Rahmenbedingungen 
 
@@ -41,7 +41,7 @@ Alle vier Modelle wurden mit folgenden Metriken bewertet:
 
 Die Ergebnisse der Modelle, gemessen an den drei genannten Metriken, lassen sich am Ende des Notebooks ``Models.ipynb`` darstellen.
 
-Die Untersuchung der Ergebnisse, lässt eine Auswahl des besten Modells zu: Das Modell 2, also Decision Tree mit Standardparametrisierung, liefert die besten Ergebnisse. 
+Die Untersuchung der Ergebnisse, lässt eine Auswahl eines besten Modells zu. Dabei werden die Ergebnisse von mehreren Trainings berücksichtigt: Das Modell 2 ("``model2_tuned``"), also Decision Tree mit eigenen Parametern, liefert in den meisten Fällen die besten Ergebnisse. 
 
 
 ## Beobachtungen:
