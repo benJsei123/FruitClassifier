@@ -22,3 +22,18 @@ Die Anforderungen wurden auf einem GitHub Project Board zu umsetzbaren Teilaufga
 
 ## Ergebnisse
 
+In dem Notebook ``Models.ipynb`` werden unter anderem vier Modelle auf den aufbereiteten Daten trainiert:
+
+- **Modell 1 ("``model1``")** nutzt logistische Regression und folgt einer Standard Parametrisierung
+- **Modell 1 ("``model1_tuned``")** nutzt logistische Regression und wurde abweichend der Standard Parametrisierung erstellt
+- **Modell 2 ("``model2``")** nutzt Decision Tree und folgt einer Standard Parametrisierung
+- **Modell 2 ("``model2_tuned``")** nutzt Decision Tree und wurde abweichend der Standard Parametrisierung erstellt
+
+Alle vier Modelle wurden mit folgenden Metriken bewertet:
+
+- Genauigkeit / Accuracy
+- F1 Score
+- Verwechslungsmatrix / Confusion Matrix
+
+
+Die Ergebnisse der Modelle, gemessen an den drei genannten Metriken, lassen sich am Ende des Notebooks ``Models.ipynb`` darstellen.
