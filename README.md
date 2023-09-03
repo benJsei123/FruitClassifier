@@ -1,12 +1,13 @@
 # FruitClassifier
 
-**Ziel**: Einen Klassifizierer entwerfen, der anhand der Merkmale Farbe, Größe und Gewicht die Fruchtarten Apfel, Banane, Traube einordnen kann.
+**Ziel**: Klassifizierer zur Einordnung der Fruchtarten Apfel, Banane, Traube entwerfen und schließlich den best geeignetsten Klassifizierer auswählen. 
 
+## Benutzung 
+Zur Benutzung muss zuerst ``FruitClassifier/Data Cleaning/Datenaufbereitung und -bereinigung.ipynb`` ausgeführt werden. Resultat ist die Erstellung einer ``clean_data.csv`` (zur weiteren Verarbeitung) und einer ``clean_data.xlsx`` (zur Ansicht, falls gewünscht). Im zweiten Schritt muss ``Models, Training etc/Models.ipynb`` ausgeführt werden. Resultat ist die Bewertung der Modellvorhersagen innerhalb des Notebooks.
 
+## Rahmenbedingungen 
 
-## Rahmenbedingungen : 
-
-Eine fruit_data.xlsx mit 200 Datensätzen stellt Daten bereit. Verschiedene Anforderungen sind durch die Aufgabenstellung gegeben:
+Eine ``fruit_data.xlsx`` mit 200 Datensätzen stellt Daten bereit. Verschiedene Anforderungen sind durch die Aufgabenstellung gegeben:
 
 - Datenverarbeitungsschritte sind nachvollziehbar
 - Datenfehlern, fehlende Werte und Ausreißer werden berücksichtigt
@@ -18,7 +19,7 @@ Eine fruit_data.xlsx mit 200 Datensätzen stellt Daten bereit. Verschiedene Anfo
 
 ## Methodik
 
-Die Anforderungen wurden auf einem GitHub Project Board zu umsetzbaren Teilaufgaben zerlegt und bestimmten Issues zugeordnet. Welche Teilaufgaben zu erledigen sind, konnte aufgrund geringer Vorkenntnisse erst während der Recherche für die nächsten Schritte bestimmt werden. Daher konnte das Projekt nicht anfangs einmal vollumfänglich geplant werden. Es wurde immer ein Issue erstellt, verschiedene Teilaufgaben festgelegt und anschließend bearbeitet. Aufgetretene Probleme sind in den Issues aufgeführt.
+Die Anforderungen wurden auf einem GitHub Project Board zu umsetzbaren Teilaufgaben zerlegt und bestimmten Issues zugeordnet. Welche konkreten Teilaufgaben zu erledigen sind, konnte aufgrund geringer Vorkenntnisse erst während der Recherche für die nächsten Schritte bestimmt werden. Daher konnte das Projekt nicht anfangs einmal vollumfänglich geplant werden. Es wurde immer ein Issue erstellt, verschiedene Teilaufgaben festgelegt und anschließend bearbeitet. Aufgetretene Probleme sind in den Issues aufgeführt.
 
 ## Ergebnisse
 
@@ -37,3 +38,11 @@ Alle vier Modelle wurden mit folgenden Metriken bewertet:
 
 
 Die Ergebnisse der Modelle, gemessen an den drei genannten Metriken, lassen sich am Ende des Notebooks ``Models.ipynb`` darstellen.
+
+Die Untersuchung der Ergebnisse, lässt eine Auswahl des besten Modells zu: Das Modell 2, also Decision Tree mit Standardparametrisierung, liefert die besten Ergebnisse. 
+
+
+## Beobachtungen:
+
+- Die Wahl der Hyperparameter mittels Grid Search hat tendenziell einen negativen Einfluss auf die Bewertung der Modelle. "Tendenziell" heißt, dass für die meisten Training-Testing-Durchläufe (= ein Gesamtdurchlauf des Notebooks ``Models.ipynb``) die eigens parametrisierten Modelle schlechter abschneiden. Nur manchmal sind die per Grid Search parametrisierten Modelle besser in ihren Vorhersagen.
+- Die Klassifizierung von Trauben funktioniert für alle 4 Modell am besten (siehe Verwechslungsmatrizen in ``Models.ipynb``). Die Klassifizierung von Äpfeln und Bananen ist für alle 4 Modelle nicht besonders zuverlässig.    
