@@ -1,50 +1,50 @@
-# FruitClassifier
+# FruitClassifier (1st ever ML project)
 
-**Ziel**: Klassifizierer zur Einordnung der Fruchtarten Apfel, Banane, Traube entwerfen und schließlich den best geeignetsten Klassifizierer auswählen. 
+**Aim**: Design classifiers to categorize the fruit types apple, banana, grape and finally select the most suitable classifier. 
 
-## Benutzung 
-Zur Benutzung muss zuerst ``FruitClassifier/Data Cleaning/Datenaufbereitung und -bereinigung.ipynb`` ausgeführt werden. Resultat ist die Erstellung einer ``clean_data.csv`` (zur weiteren Verarbeitung) und einer ``clean_data.xlsx`` (zur Ansicht, falls gewünscht). Im zweiten Schritt muss ``Models, Training etc/Models.ipynb`` ausgeführt werden. Resultat ist die Bewertung der Modellvorhersagen innerhalb des Notebooks. 
+## Usage 
+To use the program, you must first run ``FruitClassifier/Data Cleaning/Data Preparation and Cleaning.ipynb``. The result is the creation of a ``clean_data.csv`` (for further processing) and a ``clean_data.xlsx`` (for viewing, if desired). In the second step, ``Models, Training etc/Models.ipynb`` must be executed. The result is the evaluation of the model predictions within the notebook. 
 
-Hinweis zu ``Models.ipynb``: Es ist zu beachten, dass bei einzelner Ausführung der Zellen die Grid Search für die Parameterfindung erst abgeschlossen sein sollte, bevor die Modelle erstellt und trainiert werden. Andernfalls werden die Modelle mit eigener Parametrisieung nicht richtig erzeugt. 
+Note on ``Models.ipynb``: Please note that if the cells are executed individually, the grid search for parameter determination should be completed before the models are created and trained. Otherwise the models with their own parameterization will not be created correctly. 
 
-## Rahmenbedingungen 
+## General conditions 
 
-Eine ``fruit_data.xlsx`` mit 200 Datensätzen stellt Daten bereit. Verschiedene Anforderungen sind durch die Aufgabenstellung gegeben:
+A ``fruit_data.xlsx`` with 200 data sets provides data. Various requirements are given by the task:
 
-- Datenverarbeitungsschritte sind nachvollziehbar
-- Datenfehlern, fehlende Werte und Ausreißer werden berücksichtigt
-- Die Modelle logistische Regression und Decision Tree werden benutzt
-- Die Wahl der Hyperparameter ist transparent
-- Die Modelle werden anhand geeigneter Metriken bewertet
-- Die Dokumentation zeigt Fragestellung, Methodik und Ergebnisse auf
+- Data processing steps are traceable
+- Data errors, missing values and outliers are taken into account
+- The logistic regression and decision tree models are used
+- The choice of hyperparameters is transparent
+- The models are evaluated using suitable metrics
+- The documentation shows the research question, methodology and results
 
 
-## Methodik
+## Methodology
 
-Die Anforderungen wurden auf einem GitHub Project Board zu umsetzbaren Teilaufgaben zerlegt und bestimmten Issues zugeordnet. Welche konkreten Teilaufgaben zu erledigen sind, konnte aufgrund geringer Vorkenntnisse erst während der Recherche für die nächsten Schritte bestimmt werden. Daher konnte das Projekt nicht anfangs einmal vollumfänglich geplant werden. Es wurde immer ein Issue erstellt, verschiedene Teilaufgaben festgelegt und anschließend bearbeitet. Aufgetretene Probleme sind in den Issues aufgeführt.
+The requirements were broken down into feasible subtasks on a GitHub project board and assigned to specific issues. Due to a lack of prior knowledge, the specific subtasks to be completed could only be determined during the research for the next steps. As a result, the project could not be fully planned at the beginning. An issue was always created, various subtasks were defined and then worked on. Problems that arose are listed in the issues.
 
-## Ergebnisse
+## Results
 
-In dem Notebook ``Models.ipynb`` werden unter anderem vier Modelle auf den aufbereiteten Daten trainiert:
+In the notebook ``Models.ipynb`` four models are trained on the prepared data:
 
-- **Modell 1 ("``model1``")** nutzt logistische Regression und folgt einer Standard Parametrisierung
-- **Modell 1 ("``model1_tuned``")** nutzt logistische Regression und wurde abweichend der Standard Parametrisierung erstellt
-- **Modell 2 ("``model2``")** nutzt Decision Tree und folgt einer Standard Parametrisierung
-- **Modell 2 ("``model2_tuned``")** nutzt Decision Tree und wurde abweichend der Standard Parametrisierung erstellt
+- **Model 1 (“``model1``”)** uses logistic regression and follows a standard parameterization
+- Model 1 (“``model1_tuned``”)** uses logistic regression and was created deviating from the standard parameterization
+- Model 2 (“``model2``”)** uses decision tree and follows a standard parameterization
+- Model 2 (“``model2_tuned``”)** uses Decision Tree and was created in deviation from the standard parameterization
 
-Alle vier Modelle wurden mit folgenden Metriken bewertet:
+All four models were evaluated with the following metrics
 
-- Genauigkeit / Accuracy
+- Precision / Accuracy
 - F1 Score
-- Verwechslungsmatrix / Confusion Matrix
+- Confusion Matrix
 
 
-Die Ergebnisse der Modelle, gemessen an den drei genannten Metriken, lassen sich am Ende des Notebooks ``Models.ipynb`` darstellen.
+The results of the models, measured against the three metrics mentioned, can be seen at the end of the notebook ``Models.ipynb``.
 
-Die Untersuchung der Ergebnisse, lässt eine Auswahl eines besten Modells zu. Dabei werden die Ergebnisse von mehreren Trainings berücksichtigt: Das Modell 2 ("``model2_tuned``"), also Decision Tree mit eigenen Parametern, liefert in den meisten Fällen die besten Ergebnisse. 
+The analysis of the results allows the selection of the best model. The results of several trainings are taken into account: Model 2 (“``model2_tuned``”), i.e. Decision Tree with its own parameters, provides the best results in most cases. 
 
 
-## Beobachtungen:
+## Observations:
 
-- Die Wahl der Hyperparameter allein mittels Grid Search hatte tendenziell einen negativen Einfluss auf die Bewertung der Modelle. "Tendenziell" heißt, dass für die meisten Training-Testing-Durchläufe (= ein Gesamtdurchlauf des Notebooks ``Models.ipynb``) die eigens parametrisierten Modelle schlechter abschnitten. Nur manchmal waren die per Grid Search parametrisierten Modelle besser in ihren Vorhersagen. Erst durch manuelles Ausprobieren von möglichen Parameterwerten konnte bspw. für das Decision Tree Modell eine Steigerung der Genauigkeit durch Hyperparameter erreicht werden. 
-- Die Klassifizierung von Trauben funktioniert für alle 4 Modell am besten (siehe Verwechslungsmatrizen in ``Models.ipynb``). Die Klassifizierung von Äpfeln und Bananen ist für alle 4 Modelle nicht besonders zuverlässig.    
+- The choice of hyperparameters using Grid Search alone tended to have a negative influence on the evaluation of the models. “Tendency” means that for most training test runs (= a total run of the notebook ``Models.ipynb``) the models parameterized by the user performed worse. Only sometimes were the models parameterized by Grid Search better in their predictions. Only by manually trying out possible parameter values was it possible, for example, to increase the accuracy of the Decision Tree model using hyperparameters. 
+- The classification of grapes works best for all 4 models (see confusion matrices in ``Models.ipynb``). The classification of apples and bananas is not very reliable for all 4 models.    
